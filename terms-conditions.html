@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro" class="lang-loading">
 
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap">
   <link rel="stylesheet" href="assets/css/vendor.css">
   <link rel="stylesheet" href="assets/css/insync-custom.css">
+  <style>.lang-loading body{opacity:0}body{opacity:1;transition:opacity .18s ease}</style>
 </head>
 
 <body>
@@ -19,7 +20,13 @@
     <nav class="navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="Insync International SRL"></a>
-        <a class="quote-btn" href="index.html#contact">Get a Quote</a>
+        <div class="nav-actions">
+          <div class="lang-switch" role="group" aria-label="Language / Limba" data-no-translate>
+            <button type="button" data-lang-option="ro" aria-pressed="true">RO</button>
+            <button type="button" data-lang-option="en" aria-pressed="false">EN</button>
+          </div>
+          <a class="quote-btn" href="index.html#contact">Get a Quote</a>
+        </div>
       </div>
     </nav>
   </header>
@@ -40,6 +47,7 @@
       <p>For questions about these terms, contact <a href="mailto:info@insyncbuilders.com">info@insyncbuilders.com</a>.</p>
     </div>
   </main>
+  <script src="assets/js/insync-i18n.js"></script>
 </body>
 
 </html>
