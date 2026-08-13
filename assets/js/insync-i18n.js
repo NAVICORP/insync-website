@@ -197,6 +197,8 @@
     "Thank you!": "Îți mulțumim!",
     "Your enquiry has been sent. Our team will review it and get back to you shortly.": "Solicitarea ta a fost trimisă. Echipa noastră o va analiza și te va contacta în curând.",
     "Something went wrong": "A apărut o problemă",
+    "One more step": "Încă un pas",
+    "Please tick the \u201cI am human\u201d box below the form, then send your enquiry again.": "Te rugăm să bifezi caseta „Sunt om” de sub formular, apoi trimite din nou solicitarea.",
     "Your enquiry could not be sent. Please try again, or email us directly at info@insyncbuilders.com.": "Solicitarea nu a putut fi trimisă. Te rugăm să încerci din nou sau să ne scrii direct la info@insyncbuilders.com.",
     "Close": "Închide",
 

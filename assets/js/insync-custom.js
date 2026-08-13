@@ -86,6 +86,21 @@ document.addEventListener("DOMContentLoaded", function () {
         payload[key] = value;
       });
 
+      // Web3Forms has hCaptcha enabled for this access key, so a solved token
+      // is mandatory. Stop here with a clear message rather than a generic error.
+      if (form.querySelector(".h-captcha") && !payload["h-captcha-response"]) {
+        if (button) {
+          button.disabled = false;
+          button.textContent = restore;
+        }
+        openModal(
+          "error",
+          t("One more step"),
+          t("Please tick the \u201cI am human\u201d box below the form, then send your enquiry again.")
+        );
+        return;
+      }
+
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -102,6 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(function (result) {
           if (result && result.success) {
             form.reset();
+            if (window.hcaptcha) {
+              try { window.hcaptcha.reset(); } catch (err) { /* widget not ready */ }
+            }
             openModal(
               "success",
               t("Thank you!"),
@@ -112,6 +130,9 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         })
         .catch(function () {
+          if (window.hcaptcha) {
+            try { window.hcaptcha.reset(); } catch (err) { /* widget not ready */ }
+          }
           openModal(
             "error",
             t("Something went wrong"),
