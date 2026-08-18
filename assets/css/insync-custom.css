@@ -488,7 +488,7 @@ a {
   min-height: 600px;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(90deg, rgba(16, 24, 32, 0.9), rgba(16, 24, 32, 0.45)), url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=82");
+  background-image: linear-gradient(90deg, rgba(16, 24, 32, 0.9), rgba(16, 24, 32, 0.45)), url("../img/res3.png");
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -692,7 +692,7 @@ a {
 
 .final-cta {
   padding: 96px 0;
-  background-image: linear-gradient(90deg, rgba(16, 24, 32, 0.9), rgba(16, 24, 32, 0.6)), url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1800&q=82");
+  background-image: linear-gradient(90deg, rgba(16, 24, 32, 0.9), rgba(16, 24, 32, 0.6)), url("../img/villa1.png");
   background-size: cover;
   background-position: center;
   text-align: center;
